@@ -27,7 +27,11 @@
 ### | POST	    |   /places/:id/rant        | Create a rant (comment) about a particular place |
 ### | DELETE	| /places/:id/rant/:rantId  |Delete a rant (comment) about a particular place  |
 ### |  GET	    |             *             |404 page (matches any route not defined above)    |
-
+| Methods       |        Path           |                      Purpose                               |
+| ------------- |:---------------------:| ----------------------------------------------------------:|
+| col 3 is      |          /            |                      Home page                             |
+| col 2 is      |       /places         |                   Places index page                        |
+| zebra stripes |       /places         |                   Create new places                        |
 ## DB
 
 ### Places
