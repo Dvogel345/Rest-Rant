@@ -6,6 +6,17 @@ const express = require('express')
 const app = express()
 
 // Declare routes that people can visit 
-app.use('/places', require('./'))
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
 
-app.listen(3002, () => console.log('listening to port 3002'))
+app.use('/places', require('./controllers/places'))
+
+app.get('/', (req, res) => {
+  res.render('home')
+})
+
+app.get('*', (req, res) => {
+  res.render('404 Page')
+})
+
+app.listen(process.env.PORT)
