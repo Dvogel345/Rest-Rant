@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/places', (req, res) => {
-    res.send('GET /placesPlaces')
+    res.send('GET /places')
 })
 
 router.post('/places', (req, res) => {
@@ -38,10 +38,6 @@ router.get('/places/:id', (req, res) => {
 router.put('/places/:id', (req, res) => {
 })
 
-router.get('/places/:id/edit', (req, res) => {
-    res.send('GET /places/id/eidt')
-})
-
 router.delete('/places/:id', (req, res) => {
     let id = Number(req.params.id)
     if (isNaN(id)) {
@@ -54,6 +50,10 @@ router.delete('/places/:id', (req, res) => {
     }
 })
 
+router.get('/places/:id/edit', (req, res) => {
+    res.send('GET /places/id/edit')
+})
+
 router.post('/places/:id/rant', (req, res) => {
 })
 
@@ -61,7 +61,7 @@ router.delete('/places/:id/rant/:rantId', (req, res) => {
 })
 
 router.get('*', (req, res) => {
-    res.send('haloWorld')
+    res.render('places/new')
 })
 
 router.get('/:id', (req, res) => {
