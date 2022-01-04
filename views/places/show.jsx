@@ -15,7 +15,7 @@ function show (data) {
                 <a href={`/places/${data.i}/edit`} className='btn btn-warning'>
                     Edit
                 </a>
-                <form mehtod="POST" action={`/places/${data.i}?_method=DELETE`}>
+                <form mehtod="POST" action={`/places/${data.id}?_method=DELETE`}>
                     <button type="submit" className='btn btn-danger'>
                         Delete
                     </button>
