@@ -1,11 +1,25 @@
 const React = require('react')
 const Def = require('../default')
 
-function show () {
+function show (data) {
     return (
         <Def>
             <main>
-                <h1>Show Page</h1>
+                <h1>{ data.places.name}</h1>
+                <h2>Rating</h2>
+                <p>Currently Unrated</p>
+
+                <h2>Comments</h2>
+                <p>No Comments Yet!</p>
+            
+                <a href={`/places/${data.i}/edit`} className='btn btn-warning'>
+                    Edit
+                </a>
+                <form mehtod="POST" action={`/places/${data.i}?_method=DELETE`}>
+                    <button type="submit" className='btn btn-danger'>
+                        Delete
+                    </button>
+                </form>
             </main>
         </Def>
     )
