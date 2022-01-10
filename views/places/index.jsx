@@ -6,7 +6,7 @@ function places(data) {
         return (
           <div className="col-sm-6">
             <h2>
-              <a href={`/places/${index}`} >
+              <a href={`/places/${place.id}`} >
                 {place.name}
               </a>
             </h2>
@@ -24,8 +24,8 @@ function places(data) {
         <Def>
             <main>
                 <h1>Places to Rave About!</h1>
-                <div className='row'>
-                  {placesFormatted}
+                <div className="row">
+                  <div className="col-sm-6 col-md-4 col-lg-3">{placesFormatted}</div>
                 </div>
             </main>
         </Def>
