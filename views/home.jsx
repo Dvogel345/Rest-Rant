@@ -5,7 +5,7 @@ function home () {
     return (
         <Def>
             <main>
-                <div class="wrapper">
+                <div className="wrapper">
                     <h1>REST-Rant</h1>
                     <div>
                         <img src="../images/chicken-kale.jpg" alt="Chicken and Kale" />
@@ -28,13 +28,13 @@ function home () {
                     <a href="/places">
                         <button className='btn-primary'>Places Page</button>
                     </a>
-                    <div class="push"></div>
+                    <div className="push"></div>
                 </div>
-                <footer class="footer">
+                <footer className="footer">
                     <div className='extra-links' className="row">
-                        <h2><a href="https://www.facebook.com/derek.vogel.75/"><i class="fab fa-facebook"></i></a></h2>
-                        <h2><a href="https://www.linkedin.com/in/derekvogel20/"><i class="fab fa-linkedin"></i></a></h2>
-                        <h2><a href="https://github.com/Dvogel345"><i class="fab fa-github"></i></a></h2>
+                        <h2><a href="https://www.facebook.com/derek.vogel.75/"><i className="fab fa-facebook"></i></a></h2>
+                        <h2><a href="https://www.linkedin.com/in/derekvogel20/"><i className="fab fa-linkedin"></i></a></h2>
+                        <h2><a href="https://github.com/Dvogel345"><i className="fab fa-github"></i></a></h2>
                     </div>
                 </footer>
             </main>
