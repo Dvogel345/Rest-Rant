@@ -2,35 +2,41 @@ const router = require('express').Router()
 const db = require('../models')
 
 router.get('/', (req, res) => {
-  db.Place.find()
-  .then((places) => {
-      res.redirect('places/index', { places })
-  })
-  .catch(err => {
-      console.log(err)
-      res.render('error404')
-  })
+    db.Place.find()
+    .then((places) => {
+        res.render('places/index', {places})
+    })
+    .catch(err => {
+        console.log(err)
+        res.render('error404')
+    })
 })
 
 router.post('/', (req, res) => {
-  db.Place.create(req.body)
-  .then(() => {
-      res.redirect('/places')
-  })
-  .catch(err => {
-      console.log('err', err)
-      res.render('error404')
-  })
+    if (!req.body.pic) {
+        //Default img if one is not provided
+        req.body.pic = 'http://placekitten.com/400/400'
+    }
+
+    db.Place.create(req.body)
+        .then(() => {
+        res.redirect('/places')
+    })
+    
+    .catch(err => {
+        console.log('err', err)
+        res.render('error404')
+    })
 })
 
 router.get('/new', (req, res) => {
-  res.render('places/new')
+    res.render('places/new')
 })
 
 router.get('/:id', (req, res) => {
     db.Place.findById(req.params.id)
     .then(place => {
-        res.render('places/show', { places })
+        res.render('places/show', `${ places }`)
     })
     .catch(err => {
         console.log('err', err)
