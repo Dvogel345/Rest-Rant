@@ -20,17 +20,13 @@ html {
     font-size: larger;
   }
   
-  h1 {
-    text-align: center;
-    color: cornflowerblue;
-}
-
-img {
-    height: 450px;
-    width: 450px;
+h1 {
+text-align: center;
+color: cornflowerblue;
 }
 
 nav {
+    text-align: center;
     background-color: cornflowerblue;
     padding: 10px;
 }
@@ -56,14 +52,14 @@ nav a:hover {
 }
 
 body {
-    background-color: lightblue;
-    text-align: center;
-  }
-  
+  background-color: lightblue;
+  text-align: center;
+}
+
 main {
-    margin-right: 20px;
-    margin-left: 20px;
-    background-color: white;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: white;
 }
 
 .form-group {

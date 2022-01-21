@@ -7,18 +7,18 @@ function Def(html) {
                 <title>Title</title>
                 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
-                <link rel="stylesheet" href="../styles.css" />
+                <link rel="stylesheet" href="./styles.css" />
             </head>
             <body>
                 <nav>
                     <ul>
-                        <li key="uniqueId1">
+                        <li>
                             <a href="/">Home</a>
                         </li>
-                        <li key="uniqueId2">
+                        <li>
                             <a href="/places">Places</a>
                         </li>
-                        <li key="uniqueId3">
+                        <li>
                             <a href="/places/new">Add Place</a>
                         </li>
                     </ul>
