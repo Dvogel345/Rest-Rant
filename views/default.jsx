@@ -25,10 +25,10 @@ function Def(html) {
                 </nav>
                 {html.children}
             </body>
-        </html>
 <div>
                 Copyright FakeDevs LLC 2022
 </div>
+        </html>
     )
 }
 
